@@ -16,7 +16,11 @@ public class pra01 {
         int menus = 1;
 
         while (stop != true) {
-            if (respuesta == )
+            if (respuesta == 1){
+	    	menus = 2;
+	    }
+
+	    
 
         }
     }
