@@ -10,5 +10,14 @@ public class pra01 {
         String menu6 = "1.- Añadir usuario%n2.- Borrar usuario%n0.- Volver%n-------------------------%nOpción: ";
 
 
+        Scanner lec  = new Scanner(System.in);
+        boolean stop = false;
+        byte respuesta = lec.nextByte();
+        int menus = 1;
+
+        while (stop != true) {
+            if (respuesta == )
+
+        }
     }
 }
