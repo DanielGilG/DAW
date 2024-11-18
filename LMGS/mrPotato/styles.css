@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menu li{
+    width: 1000px;
+    background-color: lightgreen;
+    margin: 10px;
+}
+
+.image-sec{
+    width: 50px;
+    height: 200px;
+}

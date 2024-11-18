@@ -1,0 +1,33 @@
+Liga = nombre
+	CP = nombre
+
+Publica = nombreLiga
+	CP = nombreLiga
+	CAj = (nombreLiga) -> Liga(nombre)
+
+Privada = nombreLiga
+	CP = nombreLiga
+	CAj = (nombreLiga) -> Liga(nombre)
+
+Partido = idPartido
+	CP = idPartido
+
+Equipos = idEquipo + juega
+	CP = idEquipo
+
+contra = idEquipo + rol
+	CP = (idEquipo, rol)
+	CAj = (idEquipo) -> Equipo(idEquipo
+	CAj = (rol) -> Equipo(idEquipo)
+
+juegan = 
+
+Usuario = idUsuario + idEquipo
+	CP = idUsuario
+	CAj (idUsuario) -> Equipos(idEquipo)
+	VNN (idEquipo)
+
+ASERCION1: Equipos está contenido en Usuario (1,1).
+ASERCION2: Equipos está contenido en Juega (por (1,n) reflex).
+ASERCION3: Intersección de Publica y Privada = nulo.
+ASERCION4: Liga contiene la unión de Publica y Privada. 
