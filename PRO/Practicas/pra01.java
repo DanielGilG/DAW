@@ -15,10 +15,12 @@ public class pra01 {
         boolean stop = false;
         int menus = 1;
         int respuesta;
-        String nombre = null;
+        String nombre = "x";
         String password = null;
+        String correctPassword = "admin";
+        byte intentos = 1;
 
-        while (stop == false) { //Bucle de menús
+        while (stop == false && intentos < 3) { //Bucle de menús
             if (menus == 1) {
                 System.out.printf("%n%n%n");
                 System.out.printf(menu1);
@@ -61,9 +63,15 @@ public class pra01 {
                     case 1:
                         nombre = lec.next();
                         System.out.println("NOMBRE CAMBIADO");
-                        break;
+                        respuesta = 2;
                     case 2:
                         password = lec.next();
+                        while (!password.equals(correctPassword) && intentos < 3) {
+                            System.out.println("Contraseña incorrecta, pruebe de nuevo.");
+                            password = lec.next();
+                            intentos++;
+                        }
+                        menus = 4;
                         System.out.println("CONTRASEÑA CAMBIADA");
                         break;
                 }
@@ -82,6 +90,7 @@ public class pra01 {
                 switch (respuesta) {
                     case 0:
                         stop = true;
+                        System.out.println("¡¡Hasta luego!!");
                         break;
                 
                     case 1:
@@ -119,6 +128,11 @@ public class pra01 {
                     default:
                         break;
                 }
+            }
+            
+            if (intentos >= 3) {
+                System.out.println("------ERROR_101------");
+                System.out.println("intentos: " + intentos);
             }
         }
     }
