@@ -1,3 +1,4 @@
+import java.text.BreakIterator;
 import java.util.*;
 
 public class pra01 {
@@ -9,19 +10,116 @@ public class pra01 {
         String menu5 = "1.- Añadir película%n2.- Modificar película%n3.- Borrar película%n0.- Volver%n-------------------------%nOpción: ";
         String menu6 = "1.- Añadir usuario%n2.- Borrar usuario%n0.- Volver%n-------------------------%nOpción: ";
 
+        Scanner lec = new Scanner(System.in);
 
-        Scanner lec  = new Scanner(System.in);
         boolean stop = false;
-        byte respuesta = lec.nextByte();
         int menus = 1;
+        int respuesta;
+        String nombre = null;
+        String password = null;
 
-        while (stop != true) {
-            if (respuesta == 1){
-	    	menus = 2;
-	    }
+        while (stop == false) { //Bucle de menús
+            if (menus == 1) {
+                System.out.printf("%n%n%n");
+                System.out.printf(menu1);
+                respuesta = lec.nextInt();
 
-	    
+                switch (respuesta) {
+                    case 0:
+                        System.out.println("¡¡Hasta luego!!");
+                        stop = true;
+                        break;
+                    case 1:
+                        menus = 2;
+                        break;
+                    case 2:
+                        menus = 3;
+                        break;
+                }
+            }else if (menus == 2) { //-----------------MENU 2-----------------
+                System.out.printf("%n%n%n");
+                System.out.printf(menu2);
+                respuesta = lec.nextInt();
+                switch (respuesta) {
+                    case 0:
+                        menus = 1;
+                        break;
+                
+                    default:
+                        break;
+                }
+                
+            }else if (menus == 3) { //-----------------MENU 3-----------------1: cambiar nombre | 2: cambiar password
+                System.out.printf("%n%n%n");
+                System.out.printf(menu3);
+                respuesta = lec.nextInt();
+                
+                switch (respuesta) {
+                    case 0:
+                        menus = 1;
+                        break;
+                    case 1:
+                        nombre = lec.next();
+                        System.out.println("NOMBRE CAMBIADO");
+                        break;
+                    case 2:
+                        password = lec.next();
+                        System.out.println("CONTRASEÑA CAMBIADA");
+                        break;
+                }
 
+                if (nombre.equals("admin")) {
+                    menus = 4;
+                } else{
+                    menus = 1;
+                }
+
+            }else if (menus == 4) { //-----------------MENU 4-----------------
+                System.out.printf("%n%n%n");
+                System.out.printf(menu4);
+                respuesta = lec.nextInt();
+
+                switch (respuesta) {
+                    case 0:
+                        stop = true;
+                        break;
+                
+                    case 1:
+                        menus = 5;
+                        break;
+                    case 2:
+                        menus = 6;
+                        break;
+                }
+                
+            }else if (menus == 5) { //-----------------MENU 5-----------------
+                System.out.printf("%n%n%n");
+                System.out.printf(menu5);
+                respuesta = lec.nextInt();
+
+                switch (respuesta) {
+                    case 0:
+                        menus = 4;
+                        break;
+                
+                    default:
+                        break;
+                }
+
+            }else if (menus == 6) { //-----------------MENU 6-----------------
+                System.out.printf("%n%n%n");
+                System.out.printf(menu6);
+                respuesta = lec.nextInt();
+                
+                switch (respuesta) {
+                    case 0:
+                        menus = 4;
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
