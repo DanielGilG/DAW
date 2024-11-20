@@ -1,168 +1,108 @@
 import java.util.*;
 
+import com.sun.tools.javac.Main;
+
 public class pra02 {
     public static void main(String[] args) {
+
+        Scanner lec = new Scanner(System.in);
+
+        int menus = 3; // índice del menú
+        String respuestaUsuario; // respuesta del usuario de su nombre
+        String respuestaContrasenia; // respuesta del usuarui de su contraseña
+        boolean start = false;
+
+        // ---------------------Comienzo del búcle de menús---------------------
+
+        while (stop == false) { // Bucle de menús
+            System.out.print("Ingrese nombre + contraseña: ");
+            respuestaUsuario = lec.next();
+            respuestaContrasenia = lec.next();
+            buildMainMenu(checkUser(respuestaUsuario, respuestaContrasenia));
+
+        }
+    }
+
+    // ---------------------Métodos---------------------
+
+    public static int checkUser(String user, String password) { // -------------CHEKUSER-------------
+
+        // Usuarios y contraseñas como constantes
+        final String usuario = "usuario";
+        final String uPassword = "usuario";
+        final String admin = "admin";
+        final String aPasswod = "admin";
+
+        if (user.equals(admin) && password.equals(aPasswod)) {
+            return 1;
+        } else if (user.equals(usuario) && password.equals(uPassword)) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+
+    public static void buildMainMenu(int rol) { // -------------MAIN MENU-------------
+        String menu3 = "1.- Cambiar nombre usuario%n2.- Cambiar password%n0.- Volver%n-------------------------%nOpción: ";
+
+        // Número de intentos
+
+        if (rol == 0) { // si es user
+            buildUserMenu(1, 1);
+        } else if (rol == 1) { // si es admin
+            buildAdminMenu(1, 1);
+        } else {
+            intentos++;
+            System.out.println("Usuario desconocido, intentalo de nuevo. " + "Intentos:" + intentos);
+        }
+
+        respuesta = main.lec.next();
+    }
+
+    public static void buildUserMenu(int nivel, int eleccion) { // -------------USER MENU-------------
         String menu1 = "1.- Películas%n2.- Configuración usuario%n0.- Salir%n-------------------------%nOpción: ";
         String menu2 = "1.- Casablanca%n2.- El padrino%n0.- Volver%n-------------------------%nOpción: ";
-        String menu3 = "1.- Cambiar nombre usuario%n2.- Cambiar password%n0.- Volver%n-------------------------%nOpción: ";
+
+        if (nivel == 1) {
+            System.out.printf(menu1);
+        } else {
+            System.out.printf(menu2);
+        }
+
+    }
+
+    public static void buildAdminMenu(int nivel, int eleccion) { // -------------ADMIN MENU-------------
         String menu4 = "1.- Administrar películas%n2.- Administrar usuarios%n0.- Salir%n-------------------------%nOpción: ";
         String menu5 = "1.- Añadir película%n2.- Modificar película%n3.- Borrar película%n0.- Volver%n-------------------------%nOpción: ";
         String menu6 = "1.- Añadir usuario%n2.- Borrar usuario%n0.- Volver%n-------------------------%nOpción: ";
 
-        Scanner lec = new Scanner(System.in);
-
-        boolean stop = false;
-        int menus = 1;
-        int respuesta;
-        String nombre = "x";
-        String password = null;
-        String correctPassword = "admin";
-        byte intentos = 1;
-
-        while (stop == false && intentos < 3) { //Bucle de menús 
-            if (menus == 1) {  //-----------------MENU 1-----------------
-                System.out.printf("%n%n%n");
-                System.out.printf(menu1);
-                respuesta = lec.nextInt();
-
-                switch (respuesta) {
-                    case 0:
-                        System.out.println("¡¡Hasta luego!!");
-                        stop = true;
-                        break;
-                    case 1:
-                        menus = 2;
-                        break;
-                    case 2:
-                        menus = 3;
-                        break;
-                }
-            }else if (menus == 2) { //-----------------MENU 2-----------------
-                System.out.printf("%n%n%n");
-                System.out.printf(menu2);
-                respuesta = lec.nextInt();
-                switch (respuesta) {
-                    case 0:
-                        menus = 1;
-                        break;
-                
-                    default:
-                        break;
-                }
-                
-            }else if (menus == 3) { //-----------------MENU 3-----------------1: cambiar nombre | 2: cambiar password
-                System.out.printf("%n%n%n");
-                System.out.printf(menu3);
-                respuesta = lec.nextInt();
-                
-                switch (respuesta) {
-                    case 0:
-                        menus = 1;
-                        break;
-                    case 1:
-                        nombre = lec.next();
-                        System.out.println("NOMBRE CAMBIADO");
-                        respuesta = 2;
-                    case 2:
-                        password = lec.next();
-                        while (!password.equals(correctPassword) && intentos < 3) {
-                            System.out.println("Contraseña incorrecta, pruebe de nuevo.");
-                            password = lec.next();
-                            intentos++;
-                        }
-                        menus = 4;
-                        System.out.println("CONTRASEÑA CAMBIADA");
-                        break;
-                }
-
-                if (nombre.equals("admin")) {
-                    menus = 4;
-                } else{
-                    menus = 1;
-                }
-
-            }else if (menus == 4) { //-----------------MENU 4-----------------
-                System.out.printf("%n%n%n");
-                System.out.printf(menu4);
-                respuesta = lec.nextInt();
-
-                switch (respuesta) {
-                    case 0:
-                        stop = true;
-                        System.out.println("¡¡Hasta luego!!");
-                        break;
-                
-                    case 1:
-                        menus = 5;
-                        break;
-                    case 2:
-                        menus = 6;
-                        break;
-                }
-                
-            }else if (menus == 5) { //-----------------MENU 5-----------------
-                System.out.printf("%n%n%n");
+        if (nivel == 1) {
+            System.out.printf(menu4);
+        } else if (nivel == 2) {
+            if (eleccion == 1) {
                 System.out.printf(menu5);
-                respuesta = lec.nextInt();
-
-                switch (respuesta) {
-                    case 0:
-                        menus = 4;
-                        break;
-                
-                    default:
-                        break;
-                }
-
-            }else if (menus == 6) { //-----------------MENU 6-----------------
-                System.out.printf("%n%n%n");
+            } else {
                 System.out.printf(menu6);
-                respuesta = lec.nextInt();
-                
-                switch (respuesta) {
-                    case 0:
-                        menus = 4;
-                        break;
-                
-                    default:
-                        break;
-                }
-            }
-            
-            if (intentos >= 3) {
-                System.out.println("------ERROR_101------");
-                System.out.println("intentos: " + intentos);
             }
         }
-    }
-
-    public int checkUser(String user, String password){
-
-        if (user.equals("daniel") && password.equals("daniel")) {
-            return 0; //Credenciales correctas y usuaio = USER
-        }
-        if (user.equals("admin") && password.equals("admnin")) {
-            return 1; //Credenciales correctas y rol de ADMIN
-        }
-        else{
-            return -1;
-        }
-
 
     }
 
-    public void buildMainMenu(String ususario, String password){
-        //Menu 3
-    }
+    public static int intentos = 0; // Número de intentos al login
+    public static boolean stop = false; // Fuerza la terminación del programa
+    public static int respuesta; // respuesta del usuario de menú
 
-    public void buildUserMenu(int nivel, int eleccion){
-        //Menu 1
-        //Menu 2
-    }
-
-    public void buildAdminMenu(int nivel, int eleccion){
-        //Menu 4
-        //Menu 5
-        //Menu 6
-    }
 }
+
+//--------------------------UNSOLVED--------------------------
+//
+// -[Y] Problema1: Debo compartir el dato de "int intentos;" entre void main y
+// buildMainMenu
+// -> intentos es global
+//
+//-----------------------------------------------------------
+//
+// -[N] Problema2: ¿Cómo hago para usar el Scanner dentro de un método fuera de "void main"?
+// -> ¿Crear el objeto dentro del método?
+//
+//-----------------------------------------------------------
