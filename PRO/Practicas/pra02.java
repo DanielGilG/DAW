@@ -82,7 +82,6 @@ public class pra02 {
                 System.out.printf(menu6);
             }
         }
-
     }
 
     public static int intentos = 0; // Número de intentos al login
@@ -91,17 +90,19 @@ public class pra02 {
 
 }
 
-//--------------------------PROBLEMS--------------------------
+// --------------------------PROBLEMS--------------------------
 //
 // -[y] Problema1: Debo compartir el dato de "int intentos;" entre void main y
 // buildMainMenu
-//      -> intentos es global
+// -> intentos es global
 //
-//····························································
+// ····························································
 //
-// -[n] Problema2: ¿Cómo hago para usar el Scanner dentro de un método fuera de "void main"?
-// El único parámetro que le llega a buildMainMenu es un int. No se puede controlar la navegación
+// -[n] Problema2: ¿Cómo hago para usar el Scanner dentro de un método fuera de
+// "void main"?
+// El único parámetro que le llega a buildMainMenu es un int. No se puede
+// controlar la navegación
 // de los menús de admin y user desde fuera. debe ser desde dentro.
-//      -> ¿Crear el objeto dentro del método?
+// -> ¿Crear el objeto dentro del método?
 //
-//----[y]:solved---[n]:unsolved-------------------------------
+// ----[y]:solved---[n]:unsolved-------------------------------
