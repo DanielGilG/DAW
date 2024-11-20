@@ -19,8 +19,8 @@ public class pra02 {
         String correctPassword = "admin";
         byte intentos = 1;
 
-        while (stop == false && intentos < 3) { //Bucle de menús
-            if (menus == 1) {
+        while (stop == false && intentos < 3) { //Bucle de menús 
+            if (menus == 1) {  //-----------------MENU 1-----------------
                 System.out.printf("%n%n%n");
                 System.out.printf(menu1);
                 respuesta = lec.nextInt();
@@ -151,36 +151,19 @@ public class pra02 {
 
     }
 
-    public void buildMainMenu(int rol, int menu, int opcion){
-        String menu1 = "1.- Películas%n2.- Configuración usuario%n0.- Salir%n-------------------------%nOpción: ";
-        String menu2 = "1.- Casablanca%n2.- El padrino%n0.- Volver%n-------------------------%nOpción: ";
-
-        if (menu == 1) {
-            System.out.printf(menu1);
-        }else{
-            System.out.printf(menu2);
-        }
-
+    public void buildMainMenu(String ususario, String password){
+        //Menu 3
     }
 
-    public void buildUserMenu(int opcion){
-        String menu3 = "1.- Cambiar nombre usuario%n2.- Cambiar password%n0.- Volver%n-------------------------%nOpción: ";
-
-        switch (opcion) {
-            case 0:
-
-                break;
-        
-            default:
-                break;
-        }
-
+    public void buildUserMenu(int nivel, int eleccion){
+        //Menu 1
+        //Menu 2
     }
 
-    public void buildAdminMenu(int menu, int opcion){
-        String menu4 = "1.- Administrar películas%n2.- Administrar usuarios%n0.- Salir%n-------------------------%nOpción: ";
-        String menu5 = "1.- Añadir película%n2.- Modificar película%n3.- Borrar película%n0.- Volver%n-------------------------%nOpción: ";
-        String menu6 = "1.- Añadir usuario%n2.- Borrar usuario%n0.- Volver%n-------------------------%nOpción: ";
-
+    public void buildAdminMenu(int nivel, int eleccion){
+        //Menu 4
+        //Menu 5
+        //Menu 6
     }
+    
 }
