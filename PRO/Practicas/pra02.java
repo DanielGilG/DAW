@@ -55,8 +55,6 @@ public class pra02 {
             intentos++;
             System.out.println("Usuario desconocido, intentalo de nuevo. " + "Intentos:" + intentos);
         }
-
-        respuesta = main.lec.next();
     }
 
     public static void buildUserMenu(int nivel, int eleccion) { // -------------USER MENU-------------
@@ -68,7 +66,6 @@ public class pra02 {
         } else {
             System.out.printf(menu2);
         }
-
     }
 
     public static void buildAdminMenu(int nivel, int eleccion) { // -------------ADMIN MENU-------------
@@ -94,15 +91,17 @@ public class pra02 {
 
 }
 
-//--------------------------UNSOLVED--------------------------
+//--------------------------PROBLEMS--------------------------
 //
-// -[Y] Problema1: Debo compartir el dato de "int intentos;" entre void main y
+// -[y] Problema1: Debo compartir el dato de "int intentos;" entre void main y
 // buildMainMenu
-// -> intentos es global
+//      -> intentos es global
 //
-//-----------------------------------------------------------
+//····························································
 //
-// -[N] Problema2: ¿Cómo hago para usar el Scanner dentro de un método fuera de "void main"?
-// -> ¿Crear el objeto dentro del método?
+// -[n] Problema2: ¿Cómo hago para usar el Scanner dentro de un método fuera de "void main"?
+// El único parámetro que le llega a buildMainMenu es un int. No se puede controlar la navegación
+// de los menús de admin y user desde fuera. debe ser desde dentro.
+//      -> ¿Crear el objeto dentro del método?
 //
-//-----------------------------------------------------------
+//----[y]:solved---[n]:unsolved-------------------------------
