@@ -1,4 +1,3 @@
-import java.text.BreakIterator;
 import java.util.*;
 
 public class pra02 {
