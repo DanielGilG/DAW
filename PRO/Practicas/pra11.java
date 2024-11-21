@@ -104,7 +104,7 @@ public class pra11 {
         }
     }
 
-    public static void getMenu(int menu) {
+    public static void getMenu(int menu) { //Method for printing the derired menu
         switch (menu) {
             case 1:
                 System.out.printf(menu1);
