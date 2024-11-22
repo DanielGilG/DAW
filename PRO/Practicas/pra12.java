@@ -79,7 +79,7 @@ public class pra12 {
         }
     }
 
-    // ----------- METHODS -----------
+    // ------------------------------- METHODS -------------------------------
     public static int checkUser(String user, String password) {
         // returns: 0 if user. 1 if admin. -1 if incorrect
 

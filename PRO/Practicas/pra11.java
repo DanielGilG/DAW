@@ -73,6 +73,7 @@ public class pra11 {
             getMenu(menus);
             option = lec.nextInt();
 
+            //Print depending on the option and current menu
             if (menus == 1) {
                 switch (option) {
                     case 0:
