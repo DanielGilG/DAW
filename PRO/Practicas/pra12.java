@@ -36,6 +36,9 @@ public class pra12 {
 
     }
 
+
+
+    // ----------- METHODS -----------
     public static int checkUser(String user, String password) {
         // returns: 0 if user. 1 if admin. -1 if incorrect
 
@@ -48,7 +51,19 @@ public class pra12 {
         }
     }
 
-    public static void buildMainMenu(int nivel, int opcion){
-        
+    public static void buildMainMenu(int rol){
+        if (rol == 0) {
+            System.out.printf(menu1);
+        }else if(rol == 1){
+            System.out.printf(menu4);
+        }else{
+            System.out.println("Error:Cannot buil menu");
+        }
+    }
+
+    public static void buildUserMenu(int nivel, int opcion){
+    }
+
+    public static void buildAdminMenu(int nivel, int opcion){
     }
 }

@@ -45,7 +45,7 @@ public class pra11 {
         }
 
         // -------- ADMIN MENU LOOP WINDOWS --------
-        while (stop == false && crecentials == true && stop == true) {
+        while (stop == false && crecentials == true) {
             getMenu(menus);
             option = lec.nextInt();
 
@@ -69,7 +69,7 @@ public class pra11 {
         }
 
         // -------- USER MENU LOOP WINDOWS --------
-        while (stop == false && crecentials == false && stop == true) {
+        while (stop == false && crecentials == false) {
             getMenu(menus);
             option = lec.nextInt();
 
