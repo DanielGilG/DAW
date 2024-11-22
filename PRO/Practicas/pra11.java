@@ -92,9 +92,6 @@ public class pra11 {
                     case 0:
                         menus = 1;
                         break;
-
-                    default:
-                        break;
                 }
             }
         }
