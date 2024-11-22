@@ -2,7 +2,7 @@ import java.util.*;
 
 public class pra11 {
 
-    public static String menu1 = "1.- Películas%n2.- Configuración usuario%n0.- Salir%n-------------------------%nOpción: ";
+    static String menu1 = "1.- Películas%n2.- Configuración usuario%n0.- Salir%n-------------------------%nOpción: ";
     static String menu2 = "1.- Casablanca%n2.- El padrino%n0.- Volver%n-------------------------%nOpción: ";
     static String menu3 = "1.- Cambiar nombre usuario%n2.- Cambiar password%n0.- Volver%n-------------------------%nOpción: ";
     static String menu4 = "1.- Administrar películas%n2.- Administrar usuarios%n0.- Salir%n-------------------------%nOpción: ";
@@ -22,7 +22,7 @@ public class pra11 {
         int option; // the option the user enters in a menu
         byte intentos = 0; // trials
         boolean crecentials = false; // if its admin or user. [true=admin] [false=user]
-        boolean logged = false; // if the user is logged as something
+        boolean logged = false; // if the user is logged in
 
         // -------- FIRST LOGIN WINDOW --------
         while (logged == false && intentos < 3) {
