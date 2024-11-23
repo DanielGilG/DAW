@@ -40,7 +40,10 @@ public class pra11 {
             } else {
                 intentos++;
                 System.out.println("Usuario desconocido. Por favor, pruebe de nuevo.");
-                System.out.println("Tiene " + intentos + "/3 intentos");
+                System.out.println("Ha usado " + intentos + "/3 intentos");
+            }
+            if (intentos >= 3) {
+                stop = true;
             }
         }
 
@@ -107,7 +110,7 @@ public class pra11 {
             }
         }
 
-        if (intentos == 3) {
+        if (intentos <= 3) {
             System.out.println("-------- ERROR:Login_cancelled--------");
         }
     }
