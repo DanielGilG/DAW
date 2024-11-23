@@ -34,6 +34,8 @@ public class pra12 {
             System.out.println("Usuario deconocido. Por favor, pruebe de nuevo.");
             System.out.println("Tiene " + intentos + "/3 intentos");
             intentos++;
+            enteredName = lec.next();
+            enteredPasword = lec.next();
         }
 
         // ---------- SET THE LOGGED STATUS ----------
@@ -49,30 +51,42 @@ public class pra12 {
         // ---------- MENUS LOOP ----------
         while (logged && stop == false) {
             option = lec.nextInt();
-            
-            switch (checkUser(enteredName, enteredPasword)) { //Demasiadas cosas al añadir "level"
-            // This just modifies level for buil...Menu()
 
-                case 0: //caso de user
-                
+            switch (checkUser(enteredName, enteredPasword)) {
+                // Demasiadas cosas al añadir "level"
 
-                    switch (level) {
-                        case 1:
-                            
-                            break;
-                    
-                        case 2:
-                            break;
+                case 0: // caso de USER
+
+                    if (level == 1) {
+                        if (option == 1){
+                            level = 2;
+                        }else if (option == 2){
+                            level = 2;
+                        }else if (option == 0){
+                            logged = false;
+                            stop = true;
+                        }
+                    }else if (level == 2){
+                        if (option == 0){
+                            level = 1;
+                        }
                     }
                     
-
-                    buildUserMenu(level, option);
+                    if (logged) {
+                        buildUserMenu(level, option);
+                        System.out.printf("%n%nlevel=%d", level);
+                    }
 
                     break;
 
-                case 1: //caso de admin
+                case 1: // caso de ADMIN
 
-                    buildAdminMenu(level, option);
+                   //someting
+
+                    if (logged) {
+                        buildAdminMenu(level, option);
+                        System.out.printf("%n%nlevel=%d", level);
+                    }
 
                     break;
             }
@@ -80,19 +94,19 @@ public class pra12 {
     }
 
     // ------------------------------- METHODS -------------------------------
-    public static int checkUser(String user, String password) {
+    public static int checkUser(String inuser, String inpassword) {
         // returns: 0 if user. 1 if admin. -1 if incorrect
 
-        if (user.equals(user) && password.equals(user)) {
+        if (inuser.equals(user) && inpassword.equals(user)) {
             return 0;
-        } else if (user.equals(admin) && password.equals(admin)) {
+        } else if (inuser.equals(admin) && inpassword.equals(admin)) {
             return 1;
         } else {
             return -1;
         }
     }
 
-    public static void buildMainMenu(int rol) { //JUST PRINT IT, DON'T TOUCH IT!!
+    public static void buildMainMenu(int rol) { // JUST PRINT IT, DON'T TOUCH IT!!
         if (rol == 0) {
             System.out.printf(menu1);
         } else if (rol == 1) {
@@ -102,25 +116,27 @@ public class pra12 {
         }
     }
 
-    public static void buildUserMenu(int nivel, int opcion) { //JUST PRINT IT, DON'T TOUCH IT!!
+    public static void buildUserMenu(int nivel, int opcion) { // JUST PRINT IT, DON'T TOUCH IT!!
         if (nivel == 1) {
             System.out.printf(menu1);
-        }else{
+        } 
+        if (nivel == 2) {
             if (opcion == 1) {
                 System.out.printf(menu2);
-            }else if (opcion == 2){
+            } else if (opcion == 2) {
                 System.out.printf(menu3);
             }
         }
     }
 
-    public static void buildAdminMenu(int nivel, int opcion) { //JUST PRINT IT, DON'T TOUCH IT!!
+    public static void buildAdminMenu(int nivel, int opcion) { // JUST PRINT IT, DON'T TOUCH IT!!
         if (nivel == 1) {
             System.out.printf(menu4);
-        }else{
-            if (opcion == 1){
+        } 
+        if (nivel == 2) {
+            if (opcion == 1) {
                 System.out.printf(menu5);
-            }else if(opcion == 2){
+            } else if (opcion == 2) {
                 System.out.printf(menu6);
             }
         }
