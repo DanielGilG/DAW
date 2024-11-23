@@ -95,6 +95,16 @@ public class pra11 {
                         break;
                 }
             }
+
+            if (menus == 3) {
+                switch (option) {
+                    case 0:
+                        menus = 1;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         if (intentos == 3) {
