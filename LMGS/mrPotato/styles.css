@@ -34,15 +34,20 @@ img{
 }
 
 .text-sec{
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-content: space-between;
-    justify-content: center;
+    padding: 10px 0 10px 0;
+    /* justify-content: center; */
+    text-align: center;
     width: 500px;
     height: 200px;
-    background-color: rgb(48, 49, 63);
-    color: aliceblue;
-    text-align: center;
+    background: linear-gradient(0deg, rgb(77, 77, 104) 1%, rgb(0, 0, 0) 100%);
+    color: rgb(182, 208, 238);
+}
+
+.text-sec h1{
+    color: rgb(216, 153, 16);
 }
 
 .foot-sec{
@@ -51,7 +56,8 @@ img{
     height: 50px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(88, 88, 92);
+    background-color: rgb(54, 54, 73);
     color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 0 0 20px 20px;
 }
