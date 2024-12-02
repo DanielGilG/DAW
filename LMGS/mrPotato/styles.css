@@ -40,7 +40,7 @@ img{
     /* justify-content: center; */
     text-align: center;
     width: 500px;
-    height: 200px;
+    height: 230px;
     background: linear-gradient(0deg, rgb(77, 77, 104) 1%, #0e0c0e);
     color: rgb(182, 208, 238);
 }
@@ -69,5 +69,5 @@ img{
 }
 
 .foot-sec:hover{
-    color :rgb(255, 217, 0);
+    color :rgb(156, 133, 2);
 }
