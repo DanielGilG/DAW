@@ -42,7 +42,7 @@ img{
     text-align: center;
     width: 500px;
     height: 200px;
-    background: linear-gradient(0deg, rgb(77, 77, 104) 1%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgb(77, 77, 104) 1%, #0e0c0e);
     color: rgb(182, 208, 238);
 }
 
