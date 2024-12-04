@@ -17,6 +17,6 @@ public class Main {
        System.out.println("Subir Velocidad: " + car1.increaseVel(car1.velodicad, 10));
        System.out.println("Bajar Velocidad: " + car1.decreaseVel(car1.velodicad, 100));
 
-       flota1.addToList(flota1.car1, 123456);
+       flota1.addToList(flota1.car1);
     }
 }
