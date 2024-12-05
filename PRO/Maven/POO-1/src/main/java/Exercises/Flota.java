@@ -15,6 +15,9 @@ public class Flota {
     }
     public void removeFromList(int numBast){
         lista.removeIf(coche -> coche.numBastidor == numBast);
+        if (lista.isEmpty()){
+            System.out.println("Car not found");
+        }
         System.out.println("*Removed car from list");
     }
     public void showList(){
