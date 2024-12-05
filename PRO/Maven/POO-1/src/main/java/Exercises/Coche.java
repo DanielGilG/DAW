@@ -7,8 +7,14 @@ public class Coche {
     int numBastidor;
     int velodicad;
 
+    //Constructor
+    public Coche(String marca, int numBastidor){
+        this.marca = marca;
+        this.numBastidor = numBastidor;
+    }
+
     public String toString(){
-        return("Mi coche es un " + marca + " " + modelo+ " " + color + " con numero de bastidor " + numBastidor);
+        return("Marca: " + marca + "%nModelo:" + modelo+ "%nColor:" + color + "%nnumBast: " + numBastidor + "%n");
     }
     public int increaseVel(int velocity, int quantity){
         velocity += quantity;

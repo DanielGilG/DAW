@@ -2,9 +2,8 @@ package Exercises;
 
 public class Main {
     public static void main(String[] args) {
-       Coche car1 = new Coche();
-       Coche car2 = new Coche();
-
+       Coche car1 = new Coche(null, 0);
+       Coche car2 = new Coche(null, 0);
        Flota flota1 = new Flota();
 
        car1.marca = "Ford";
@@ -16,7 +15,13 @@ public class Main {
        System.out.println(car1.toString());
        System.out.println("Subir Velocidad: " + car1.increaseVel(car1.velodicad, 10));
        System.out.println("Bajar Velocidad: " + car1.decreaseVel(car1.velodicad, 100));
+       System.out.printf("----------------------%n%n");
+
 
        flota1.addToList(flota1.car1);
+       flota1.addToList(flota1.car2);
+       flota1.showList();
+       flota1.removeFromList(1);
+       flota1.showList();
     }
 }
