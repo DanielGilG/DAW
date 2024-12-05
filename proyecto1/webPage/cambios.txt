@@ -1,0 +1,40 @@
+Ahora los divs están separado por "sections" dentro del "main".
+Los títulos de los "containers" están fuera de divs individuales, pero tienen una clase de "container_title".
+Indicadas los elementos por clase y no pod "id".
+Añadido footer.
+
+-----Esquema-----
+
+body
+    header
+        nav
+    main
+        section (next matches)
+            title
+            match
+            match
+            match
+        section (ranking)
+            title
+            list
+                data
+                data
+                data
+        section (stats)
+            title
+            table
+                title
+                list
+            table
+                title
+                list
+            table
+                title
+                list
+        section (user zone)
+            image
+        section (coming matches)
+            title
+            data
+    footer
+        paragraph
