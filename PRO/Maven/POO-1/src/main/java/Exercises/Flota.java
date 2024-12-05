@@ -14,11 +14,7 @@ public class Flota {
         System.out.println("*Car added to list");
     }
     public void removeFromList(int numBast){
-        for (Coche coche : lista){
-            if (coche.numBastidor == numBast){
-                lista.remove(coche);
-            }
-        }
+        lista.removeIf(coche -> coche.numBastidor == numBast);
         System.out.println("*Removed car from list");
     }
     public void showList(){
