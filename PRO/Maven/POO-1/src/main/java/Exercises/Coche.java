@@ -12,7 +12,6 @@ public class Coche {
         this.marca = marca;
         this.numBastidor = numBastidor;
     }
-
     public String toString(){
         return("Marca: " + marca + "%nModelo:" + modelo+ "%nColor:" + color + "%nnumBast: " + numBastidor + "%n");
     }
