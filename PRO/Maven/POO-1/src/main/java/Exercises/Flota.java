@@ -19,8 +19,7 @@ public class Flota {
                 lista.remove(coche);
             }
         }
-        //lista.remove(numBast);
-        System.out.println("*Removed from list");
+        System.out.println("*Removed car from list");
     }
     public void showList(){
         for (Coche coche: lista){
