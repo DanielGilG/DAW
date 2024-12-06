@@ -1,0 +1,99 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 917px;
+    width: 412px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    background-color: #1a1a1a;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas:
+        "head head"
+        "main main"
+        "foot foot";
+}
+
+/* Estilo de las áreas del grid */
+header {
+    grid-area: head;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+header * {
+
+}
+main{
+    width: 100%;
+    height: 100%;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 35% 35%;
+    grid-template-areas: 
+        "next next"
+        "ranking statistics"
+        "user coming";
+
+}
+main *{
+    font-size: smaller;
+    text-align: center;
+    list-style-type: none;
+}
+
+.container_next_matches {
+    grid-area: next;
+    width: 100%;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+}
+
+.container_ranking {
+    grid-area: ranking;
+    border: 2px solid lightpink;
+    border-radius: 20px;
+}
+
+.container_statistics {
+    grid-area: statistics;
+    border: 2px solid lightgreen;
+    border-radius: 20px;
+}
+
+.user_zone {
+    grid-area: user;
+    border: 2px solid lightsalmon;
+    border-radius: 20px;
+}
+
+.container_coming_matches {
+    grid-area: coming;
+    border: 2px solid lightgreen;
+    border-radius: 20px;
+}
+
+footer {
+    grid-area: foot;
+    border: 1px solid rgb(0, 255, 0);
+    border-radius: 20px;
+}
