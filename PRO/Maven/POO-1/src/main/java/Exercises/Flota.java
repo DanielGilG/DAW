@@ -14,11 +14,14 @@ public class Flota {
         System.out.println("*Car added to list");
     }
     public void removeFromList(int numBast){
-        lista.removeIf(coche -> coche.numBastidor == numBast);
-        if (lista.isEmpty()){
-            System.out.println("Car not found");
+        if(lista.removeIf(coche -> coche.numBastidor == numBast)){ //Lambda se ejecuta aunque esté dentro de un if
+            System.out.println("*Removed car from list with num: " + numBast);
+        }else {
+            System.out.println("*Car not found in list");
         }
-        System.out.println("*Removed car from list");
+        if (lista.isEmpty()){
+            System.out.println("List is empty. No cars in list");
+        }
     }
     public void showList(){
         for (Coche coche: lista){
