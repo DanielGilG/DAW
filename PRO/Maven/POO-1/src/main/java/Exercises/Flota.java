@@ -14,7 +14,7 @@ public class Flota {
         System.out.println("*Car added to list");
     }
     public void removeFromList(int numBast){
-        if(lista.removeIf(coche -> coche.numBastidor == numBast)){ //Lambda se ejecuta aunque esté dentro de un if
+        if(lista.removeIf(coche -> coche.numBastidor == numBast)){
             System.out.println("*Removed car from list with num: " + numBast);
         }else {
             System.out.println("*Car not found in list");
@@ -25,7 +25,7 @@ public class Flota {
     }
     public void showList(){
         for (Coche coche: lista){
-            System.out.printf(String.valueOf(coche)); //String value para arreglar el error al printf
+            System.out.printf(String.valueOf(coche));
         }
     }
     public Coche searchCar(int numBast) {
