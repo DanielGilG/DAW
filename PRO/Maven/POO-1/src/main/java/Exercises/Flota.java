@@ -28,4 +28,12 @@ public class Flota {
             System.out.printf(String.valueOf(coche)); //String value para arreglar el error al printf
         }
     }
+    public Coche searchCar(int numBast) {
+        for (Coche coche : lista) {
+            if (coche.numBastidor == numBast) {
+                return coche;
+            }
+        }
+        return null;
+    }
 }
