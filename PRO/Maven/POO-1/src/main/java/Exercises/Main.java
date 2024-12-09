@@ -5,6 +5,8 @@ public class Main {
        Coche car1 = new Coche(null, 0);
        Coche car2 = new Coche(null, 0);
        Flota flota1 = new Flota();
+       Conductor conductor1 = new Conductor("Pepe", car1);
+       Conductor conductor2 = new Conductor("Pepe", car2);
 
        car1.marca = "Ford";
        car1.modelo = "Fusion";
