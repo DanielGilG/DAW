@@ -1,4 +1,4 @@
-package Exercises;
+package Exercises.POOI;
 
 public class Coche {
     String marca;
