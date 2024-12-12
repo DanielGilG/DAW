@@ -19,11 +19,11 @@ public class Main {
        System.out.println("Bajar Velocidad: " + car1.decreaseVel(car1.velodicad, 100));
        System.out.printf("----------------------%n%n");
 
-       flota1.addToList(flota1.car1);
-       flota1.addToList(flota1.car2);
-       flota1.showList();
-       flota1.removeFromList(123);
-       flota1.showList();
+//       flota1.addToList(flota1.car1);
+//       flota1.addToList(flota1.car2);
+//       flota1.showList();
+//       flota1.removeFromList(123);
+//       flota1.showList();
     }
 }
 //https://gist.github.com/hansrajdas/6520d74ac3251552e66a76f2f32b4bdd

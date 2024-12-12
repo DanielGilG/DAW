@@ -8,9 +8,9 @@ public class Conductor {
         this.nombre = nombre;
         this.asignado = asignado;
     }
-
     public void checkCarInFlota(int numBast, Flota flota){
         asignado = flota.searchCar(numBast);
+        System.out.println(nombre + " : " + asignado.marca);
     }
     public void showAsignedCar(){
         System.out.println("Coche asignado a " + nombre + " : " + asignado);
