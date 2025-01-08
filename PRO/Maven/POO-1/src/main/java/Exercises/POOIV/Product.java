@@ -2,8 +2,9 @@ package Exercises.POOIV;
 
 public class Product {
     private int id;
-    private float price;
+    protected float price;
 
+    //Constructor
     public Product(int id, float price) {
         this.id = id;
         this.price = price;
