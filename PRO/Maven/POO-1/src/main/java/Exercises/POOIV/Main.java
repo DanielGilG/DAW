@@ -10,14 +10,27 @@ public class Main {
         Product cloth2 = new Clothes(2, 13f, "Sweeter", "S", "Red");
         Product book1 = new Books(3, 28.99f, "Kafka", "Metamorphosis");
         Product book2 = new Books(4, 2f, "Cantajuegos", "La vaca lola");
+        int eleccion = 0;
 
         List<Product> productList;
         productList = new ArrayList();
 
-        showProducts(cloth1, productList);
-        showProducts(cloth2, productList);
-        showProducts(book1, productList);
-        showProducts(book2, productList);
+
+        switch (eleccion){
+            case 0:
+                showProducts(cloth1, productList);
+                showProducts(cloth2, productList);
+                showProducts(book1, productList);
+                showProducts(book2, productList);
+            case 1:
+                showProducts(cloth1, productList);
+                showProducts(cloth2, productList);
+            case 2:
+                showProducts(book1, productList);
+                showProducts(book2, productList);
+            default:
+                break;
+        }
     }
 
     public static void showProducts(Product product, List<Product> productList) {
