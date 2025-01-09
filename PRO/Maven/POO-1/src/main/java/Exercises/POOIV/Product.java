@@ -1,7 +1,7 @@
 package Exercises.POOIV;
 
 public class Product {
-    private int id;
+    protected int id;
     protected float price;
 
     //Constructor

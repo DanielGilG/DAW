@@ -10,6 +10,8 @@ public class Main {
         Product cloth2 = new Clothes(2, 13f, "Sweeter", "S", "Red");
         Product book1 = new Books(3, 28.99f, "Kafka", "Metamorphosis");
         Product book2 = new Books(4, 2f, "Cantajuegos", "La vaca lola");
+        Product computer1  = new Computer(5,100f);
+        Product computer2  = new Computer(5,100f);
         int eleccion = 0;
 
         List<Product> productList;
@@ -22,12 +24,17 @@ public class Main {
                 showProducts(cloth2, productList);
                 showProducts(book1, productList);
                 showProducts(book2, productList);
+                showProducts(computer1, productList);
+                showProducts(computer2, productList);
             case 1:
                 showProducts(cloth1, productList);
                 showProducts(cloth2, productList);
             case 2:
                 showProducts(book1, productList);
                 showProducts(book2, productList);
+            case 3:
+                showProducts(computer1, productList);
+                showProducts(computer2, productList);
             default:
                 break;
         }
