@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <main>
-        <fieldset>
-            <legend>Información Personal</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </fieldset>
-
-        <fieldset>
-            <legend>Información de Envío</legend>
-            <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion">
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" id="ciudad" name="ciudad">
-        </fieldset>
-
-        
+        <form action="/submit" method="POST">
+            <fieldset>
+                <legend>Informacion personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+                <label for="color">Color Favorito:</label>
+                <input type="color" id="color" name="color">
+                <label for="genero">Género</label>
+                <input type="radio" name="genero" id="genero">Masculino
+                <input type="radio" name="genero" id="genero">Femenino
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label for="intereses">Intereses:</label>
+                <input type="checkbox" name="intereses" value="deporte"> Deporte
+                <input type="checkbox" name="intereses" value="musica"> Música
+                <input type="checkbox" name="intereses" value="musica"> Lectura
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios</legend>
+                <label for="comentarios">Comentarios</label>
+                <input type="textarea" name="comentarios" id="comentarios">
+            </fieldset>
+            <fieldset>
+                <legend>Archivos</legend>
+                <label for="archivos">Sube tu archivo</label>
+                <input type="file" name="archivo" id="archivo">
+            </fieldset>
+            <fieldset>
+                <input type="submit">
+                <input type="reset">
+            </fieldset>
+        </form>
     </main>
 </body>
-
 </html>
