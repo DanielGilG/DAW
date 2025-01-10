@@ -7,8 +7,16 @@ form{
     display: flex;
     align-items: left;
     flex-direction: column;
+
+    margin: auto;
 }
 
 form fieldset{
     display: flex;
 }
+
+label{
+    display: block;
+}
+
+input [type="text"]{}
