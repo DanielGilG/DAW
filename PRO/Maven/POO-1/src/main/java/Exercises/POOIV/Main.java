@@ -12,36 +12,45 @@ public class Main {
         Product book2 = new Books(4, 2f, "Cantajuegos", "La vaca lola");
         Product computer1  = new Computer(5,100f);
         Product computer2  = new Computer(5,100f);
-        int eleccion = 0;
+        int eleccion = 3;
 
         List<Product> productList;
         productList = new ArrayList();
 
+        productList.add(cloth1);
+        productList.add(cloth2);
+        productList.add(book1);
+        productList.add(book2);
+        productList.add(computer1);
+        productList.add(computer2);
+
 
         switch (eleccion){
             case 0:
-                showProducts(cloth1, productList);
-                showProducts(cloth2, productList);
-                showProducts(book1, productList);
-                showProducts(book2, productList);
-                showProducts(computer1, productList);
-                showProducts(computer2, productList);
+                for (Product prod : productList){
+                    System.out.println(prod);
+                }
+                break;
             case 1:
-                showProducts(cloth1, productList);
-                showProducts(cloth2, productList);
+                for (Product prod : productList){
+                    if (prod instanceof Clothes)
+                        System.out.println(prod);
+                }
+                break;
             case 2:
-                showProducts(book1, productList);
-                showProducts(book2, productList);
+                for (Product prod : productList){
+                    if (prod instanceof Books)
+                        System.out.println(prod);
+                }
+                break;
             case 3:
-                showProducts(computer1, productList);
-                showProducts(computer2, productList);
+                for (Product prod : productList){
+                    if (prod instanceof Computer)
+                        System.out.println(prod);
+                }
+                break;
             default:
                 break;
         }
-    }
-
-    public static void showProducts(Product product, List<Product> productList) {
-        System.out.println(product);
-        productList.add(product);
     }
 }
