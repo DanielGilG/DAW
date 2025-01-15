@@ -1,4 +1,4 @@
 package MachineProject.Proto;
 
-public class User {
+public class Panel {
 }
