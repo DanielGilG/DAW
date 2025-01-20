@@ -14,6 +14,7 @@ main{
 
 .title1{
     animation: mover 1s infinite;
+    width: auto;
 }
 
 .title2{
@@ -21,11 +22,14 @@ main{
     margin: 100px;
     animation-timing-function: ease-in-out;
     animation: rotar 1s infinite;
+    width: auto;
+
 }
 
 .title3{
     font-family: 'Courier', monospace;
-    
+    width: auto;
+
 }
 
 .title1::before {
@@ -37,7 +41,7 @@ main{
     color: #2980b9;
 }
 
-.title2::after {
+/* .title2::after {
     content: " 𐓏";
 }
 
@@ -51,4 +55,26 @@ main{
 
 .title3::before {
     content: "☢︎ ";
+} */
+
+
+
+footer{
+    padding: 50px;
+    text-align: center;
+}
+
+.button {
+    background-color: green;
+    border-radius: 20px;
+    color: white;
+    width: 200px;
+    height: 100px;
+    transition: all 0.2s ease;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.button:hover{
+    scale: 1.2;
 }
