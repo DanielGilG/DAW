@@ -1,0 +1,42 @@
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(142deg, rgba(255,255,255,1) 10%, rgba(0,212,255,1) 100%);    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 400px;
+    width: 300px;
+    perspective: 1000px;
+}
+
+.card:hover .inner{
+    transform: rotateY(180deg);
+}
+
+.inner{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+
+.front{
+    background-color: #1e3c72;
+}
+
+.back{
+    background-color: #375793;
+    transform: rotateY(180deg);
+}
