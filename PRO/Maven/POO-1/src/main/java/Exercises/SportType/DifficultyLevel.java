@@ -1,9 +1,9 @@
 package Exercises.SportType;
 
 public enum DifficultyLevel {
-    BEGGINER(0d),
-    INTERMIDIATE(0.1d),
-    ADVANCED (0.2d);
+    BEGGINER(1d),
+    INTERMIDIATE(1.1d),
+    ADVANCED (1.2d);
 
     private double diffpercentil;
 

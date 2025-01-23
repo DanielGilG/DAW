@@ -34,7 +34,7 @@ public class SportEvent {
         return "SportEvent{" +
                 "sport=" + sport +
                 ", difficulty=" + difficulty +
-                ", basePrice=" + basePrice +
+                ", basePrice=" + calculatePrice() +
                 '}';
     }
 }

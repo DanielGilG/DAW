@@ -14,7 +14,6 @@ public class Main {
         System.out.println("5. Cycling");
         System.out.println("----------------");
         System.out.println("");
-
         int sportChoice = lec.nextInt();
 
         System.out.println("1. Begginer");
@@ -22,14 +21,12 @@ public class Main {
         System.out.println("3. Advanced");
         System.out.println("----------------");
         System.out.println("");
-
         int difficultyChoice = lec.nextInt();
 
         System.out.print("Indique el precio base: ");
-
         double priceChoice = lec.nextDouble();
 
-        SportType sport = SportType.SOCCER;
+        SportType sport = null;
 
         switch (sportChoice){
             case 1:
@@ -42,22 +39,31 @@ public class Main {
                 sport = SportType.TENNIS;
                 break;
             case 4:
+                sport = SportType.SWIMMING;
                 break;
             case 5:
+                sport = SportType.CYCLING;
+                break;
+            default:
                 break;
         }
 
+        DifficultyLevel difficulty = null;
+
         switch (sportChoice){
             case 1:
+                difficulty = DifficultyLevel.BEGGINER;
                 break;
             case 2:
+                difficulty = DifficultyLevel.INTERMIDIATE;
                 break;
             case 3:
+                difficulty = DifficultyLevel.ADVANCED;
                 break;
-            case 4:
-                break;
-            case 5:
+            default:
                 break;
         }
+        SportEvent event1 = new SportEvent(sport, difficulty, priceChoice);
+        System.out.println(event1.toString());
     }
 }
