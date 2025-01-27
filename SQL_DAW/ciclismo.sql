@@ -487,6 +487,17 @@ where (c.dorsal = e.dorsal);
 select avg(c.edad) as media, max(c.edad), min(c.edad)
 from ciclista c, etapa e;
 
+-- Subconsulta 1.5
+select c.nomeq
+from ciclista c
+where c.edad < 33 and c.nomeq = (select e.nomeq
+								 from equipo e
+								 where e.nomeq = c.nomeq);
+
+-- Join 1.5
+select c.nomeq
+from ciclista join equipo e on c.nomeq = e.nomeq;
+
 -- Ejercicio 2.1
 select c.nombre
 from ciclista c, etapa e, puerto p
