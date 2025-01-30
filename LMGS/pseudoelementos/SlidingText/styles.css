@@ -11,9 +11,9 @@ body{
 }
 
 @keyframes animate {
-    0% { transform: scale(100%); color:rgb(8, 0, 255); }
-    50% { transform: scale(120%); }
-    100% { transform: scale(100%); color:rgb(238, 0, 0);}
+    0% { transform: scale(100%);}
+    50% { transform: scale(120%);}
+    100% { transform: scale(100%);}
 }
 
 @keyframes slide1 {
@@ -29,7 +29,7 @@ body{
 }
 
 .title{
-    animation: animate 1s infinite;
+    animation: animate 0.5s infinite;
     overflow: hidden;
 }
 
@@ -39,5 +39,5 @@ body{
     width: 90%;
     height: 100%;
     background-color: rgb(0, 0, 0);
-    animation: slide2 2s infinite;
+    animation: slide2 1s infinite;
 }

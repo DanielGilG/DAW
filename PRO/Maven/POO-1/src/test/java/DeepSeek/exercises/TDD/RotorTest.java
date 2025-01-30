@@ -1,4 +1,4 @@
-package MachineProject.TDD;
+package DeepSeek.exercises.TDD;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
