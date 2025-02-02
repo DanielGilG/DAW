@@ -1,4 +1,3 @@
-# Cosas de clase
+# Material de clase
 - Ejercicios
 - Trabajos
-HP DANIEL
