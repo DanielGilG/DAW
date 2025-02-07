@@ -98,8 +98,7 @@ group by e.netapa;
 
 
 
-
-
+-- EJERCICIOS HECHOS EN CASA ↓↓↓↓↓↓↓↓↓↓
 
 
 
@@ -145,7 +144,6 @@ select c.nombre, count(m.codigo)
 from ciclista c join llevar l on c.dorsal = l.dorsal
 		join maillot m on l.codigo = m.codigo
 group by c.nombre having count(m.codigo) > 3;
-
 
 -- ÜBUNG 9
 select c.nombre, count(p.nompuerto), avg(pendiente)
