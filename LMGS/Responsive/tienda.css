@@ -60,13 +60,14 @@ header{
     text-align: center;
     background-color: #6E9887;
 
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
     transition: all 0.2s;
 }
 
 
 .product:hover{
     background-color: #edbfb7;
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(5deg);
     box-shadow: 1px 10px 15px 5px rgba(0, 0, 0, 0.5); 
+    
 }
