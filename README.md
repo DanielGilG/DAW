@@ -2,4 +2,5 @@
 - Java (POO).
 - SQL Queries.
 - HTML/CSS (front-end).
+- Small personal Web App test (slow process).
 - *More to come...*
