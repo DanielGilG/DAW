@@ -137,26 +137,35 @@ group by c.nomeq having avg(c.edad) > 30;
 describe etapa;
 select c.nombre, count(e.netapa), sum(e.km)
 from ciclista c join etapa e on c.dorsal = e.dorsal
-group by c.nombre having sum(e.km) > 200;
+where e.km > 200
+group by c.nombre
+having count(e.netapa)>0;
 
 -- ÜBUNG 8
 select c.nombre, count(m.codigo)
 from ciclista c join llevar l on c.dorsal = l.dorsal
 		join maillot m on l.codigo = m.codigo
-group by c.nombre having count(m.codigo) > 3;
+group by c.nombre having count(m.codigo) > 2;
 
 -- ÜBUNG 9
 select c.nombre, count(p.nompuerto), avg(pendiente)
 from ciclista c join puerto p on c.dorsal = p.dorsal
-group by c.nombre having avg(p.pendiente) > 5;
+group by c.nombre where avg(p.pendiente) > 5;
 
 -- ÜBUNG 10
 select c.nomeq, count(c.nombre), max(c.edad)
 from ciclista c
-group by c.nomeq having max(c.edad) > 30;
+where c.edad > 30
+group by c.nomeq having count(c.nombre) > 3;
 
 -- ÜBUNG 11
 select c.nombre,count(m.codigo)
 from ciclista c join llevar l on c.dorsal = l.dorsal
 		join maillot m on l.codigo = m.codigo
 group by c.nombre having count(m.codigo) > 1;
+
+-- ÜBUNG 12?
+select c.nombre
+from ciclista c join etapa e on c.dorsal = e.dorsal
+group by c.nombre
+having count(e.netapa)=3 and avg(e.km)>180;
