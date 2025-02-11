@@ -1,0 +1,64 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+/* Pantallas grandes (PC) → 4 columnas */
+@media (min-width: 1024px) {
+    .card {
+        grid-column: span 3; 
+    }
+}
+
+/* Tablets → 2 columnas por tarjeta */
+@media (max-width: 1023px) and (min-width: 600px) {
+    .card {
+        grid-column: span 6; /
+    }
+}
+
+/* Móviles → 1 columna */
+@media (max-width: 599px) {
+    .card {
+        grid-column: span 12; 
+    }
+}
+
+/* Pantallas en modo horizontal */
+@media (max-width: 900px) and (orientation: landscape) {
+    .card {
+        grid-column: span 4; 
+    }
+}
+
