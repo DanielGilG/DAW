@@ -3,7 +3,7 @@ package Excepciones.checkEdad;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner lec = new Scanner(System.in);
 
         try {
@@ -13,6 +13,9 @@ public class App {
             System.out.println(result);
         }catch (Exception e){
             System.out.println("Algo salió mal... :(");
+        }
+        finally {
+            throw new Exception("Mensaje personalizado Excepcion");
         }
     }
 
