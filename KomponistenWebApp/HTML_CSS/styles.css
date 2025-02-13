@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Katibeh', serif;
+    font-size: 22px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,230,230,1) 60%, rgba(255,255,255,1) 100%); 
+}
+
+header{
+    padding: 30px;
+    font-size: 30px;
+    color: #444444;
+}
+
+.MainTitle::first-letter{
+    color: red;
+    font-size: 180%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 60px;
+}
+
+.PopularTab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 600px;
+}
+
+.PopularTab ul{
+
+    list-style-type: none;
+}
