@@ -1,0 +1,6 @@
+Tenemos 4 capas
+
+Presentación
+Servicio
+Persistence (Book, Author)
+Infraestructura

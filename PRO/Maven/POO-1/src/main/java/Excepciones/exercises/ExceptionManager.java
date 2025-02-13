@@ -11,13 +11,6 @@ public class ExceptionManager {
         ex3();
         System.out.println("---------------------------------");
 
-        try {
-            String cadena = "abcde";
-            int entero = (int) cadena;
-        } catch (Exception e) {
-            System.out.println("Excep en cadenas");
-            System.out.println(e.getMessage());
-        }
     }
     public static void ex1(){
         Scanner lec = new Scanner(System.in);
@@ -36,16 +29,25 @@ public class ExceptionManager {
         int[] array = new int[5];
         try {
             System.out.println(array[6]);
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Error en la consulta al Array"); System.out.println(e.getMessage());
         }
     }
     public static void ex3(){
-        TestObject t1 = new TestObject();
+        String string = null;
         try {
-            t1.metodo();
-        }catch (Exception e){
+            string.toString();
+        }catch (NullPointerException e){
             System.out.println("Excepcion en el Objeto");
+            System.out.println(e.getMessage());
+        }
+    }
+    public static void ex4(){
+        try {
+            String cadena = "abcde";
+            int entero = Integer.parseInt(cadena);
+        } catch (ClassCastException e) {
+            System.out.println("Excep en cadenas");
             System.out.println(e.getMessage());
         }
     }
