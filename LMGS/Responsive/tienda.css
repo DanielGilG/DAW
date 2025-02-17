@@ -8,7 +8,6 @@
 /* Para pantallas medianas */
 @media (min-width: 601px) and (max-width: 900px) {
     .container{
-        display: inline-grid;
         grid-template-columns: auto auto;
     }
 }
