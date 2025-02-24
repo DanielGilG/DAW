@@ -1,6 +1,6 @@
-package service;
+package BooksNAuthors.service;
 
-import model.Book;
+import BooksNAuthors.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;

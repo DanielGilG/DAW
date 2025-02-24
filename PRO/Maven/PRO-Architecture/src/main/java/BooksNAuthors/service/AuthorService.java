@@ -1,8 +1,8 @@
-package service;
+package BooksNAuthors.service;
 
-import exceptions.AuthorHasBooks;
-import exceptions.AuthorNotFound;
-import model.Author;
+import BooksNAuthors.exceptions.AuthorHasBooks;
+import BooksNAuthors.exceptions.AuthorNotFound;
+import BooksNAuthors.model.Author;
 
 import java.util.ArrayList;
 import java.util.List;

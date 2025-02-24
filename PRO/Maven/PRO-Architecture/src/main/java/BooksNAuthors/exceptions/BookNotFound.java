@@ -1,4 +1,4 @@
-package exceptions;
+package BooksNAuthors.exceptions;
 
 public class BookNotFound extends RuntimeException {
     public BookNotFound(String message) {
