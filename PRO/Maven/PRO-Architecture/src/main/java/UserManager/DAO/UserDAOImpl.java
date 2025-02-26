@@ -8,15 +8,6 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO{
     ArrayList<User> userList = new ArrayList<>();
 
-    public UserDAOImpl(ArrayList<User> userList) {
-        this.userList = userList;
-
-        userList.add(new User(1, "Max", "maxmueller@example.com"));
-        userList.add(new User(2, "Hans", "hansxmueller@example.com"));
-        userList.add(new User(3, "Erika", "erikamueller@example.com"));
-        userList.add(new User(4, "Veronika", "vermueller@example.com"));
-    }
-
     @Override
     public void create(User user) {
         userList.add(user);
