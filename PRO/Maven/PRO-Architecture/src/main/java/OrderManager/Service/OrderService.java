@@ -25,4 +25,12 @@ public class OrderService {
     public Order searchOrderById(int id) {
         return orderDAO.searchOrderById(id);
     }
+
+    public void updateOrder(Order order){
+        orderDAO.updateOrder(order);
+    }
+
+    public void removeOrder(int id){
+        orderDAO.removeOrder(id);
+    }
 }
