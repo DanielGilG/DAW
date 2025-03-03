@@ -16,6 +16,7 @@ public class UserService {
         userDAO.create(user);
     }
 
+
     public List<User> getAll(){
         return userDAO.getAll();
     }
