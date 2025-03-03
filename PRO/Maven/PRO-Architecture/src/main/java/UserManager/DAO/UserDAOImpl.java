@@ -14,26 +14,6 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public void update(User user) {
-        for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).getId() == user.getId()){
-                userList.set(i, user);
-                return;
-            }
-        }
-    }
-
-    @Override
-    public void delete(int id) {
-        for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).getId() == id) {
-                userList.remove(id);
-                return;
-            }
-        }
-    }
-
-    @Override
     public List<User> getAll() {
         return userList;
     }

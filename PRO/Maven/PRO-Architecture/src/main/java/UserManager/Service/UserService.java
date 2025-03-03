@@ -16,17 +16,6 @@ public class UserService {
         userDAO.create(user);
     }
 
-    public void updateUser(User user){
-        if (userDAO.searchById(user.getId()) == null){
-            throw new RuntimeException("User does no exist");
-        }
-        userDAO.update(user);
-    }
-
-    public void deleteUser(int id){
-        userDAO.delete(id);
-    }
-
     public List<User> getAll(){
         return userDAO.getAll();
     }
