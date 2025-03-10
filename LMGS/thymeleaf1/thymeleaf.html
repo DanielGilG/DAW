@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2 - Diseño con Tarjetas</title>
+    <link rel="stylesheet" href="/css/ejemplo1.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Aplicación Web</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li th:each="menu : ${menus}"><a th:href="@{${menu.url}}" th:text="${menu.nombre}"></a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="contenido">
+                <article class="tarjeta" th:each="articulo : ${articulos}">
+                    <h2 th:text="${articulo.titulo}"></h2>
+                    <p th:text="${articulo.contenido}"></p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy;  2025 DAW1 CIPFP Mislata.</p>
+    </footer>
+</body>
+</html>
+
