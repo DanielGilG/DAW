@@ -4,6 +4,7 @@
 - Java
 - SQL
 - HTML/CSS
+- VimRC
 
 ## Projects (WIP)
 - Komponisten 𝄞
