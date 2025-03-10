@@ -1,8 +1,10 @@
-# Content of Web. Application. Development. Course.
-- Java (POO).
-- SQL Queries.
-- HTML/CSS (front-end).
-- Small personal Web App test (slow process).
-- *More to come...*
+# Content
 
-Test Ubuntu WLS
+## Notes and Activities
+- Java
+- SQL
+- HTML/CSS
+
+## Projects (WIP)
+- Komponisten 𝄞
+- *More to come...*
