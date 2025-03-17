@@ -1,18 +1,23 @@
 body{
     padding: 0;
     margin: 0;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
+
     font-family: 'Katibeh', serif;
     font-size: 22px;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,230,230,1) 60%, rgba(255,255,255,1) 100%); 
     background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 header{
-    padding: 30px;
+    grid-column: span 12;
     font-size: 30px;
     color: #444444;
     text-align: center;
@@ -23,34 +28,25 @@ header{
     font-size: 180%;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .SearchBar{
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: white;
+    background-color: lightgray;
     border-radius: 20px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    color: grey;
     width: 300px;
     height: 60px;
+    transition: all 0.2s;
 }
 
-.SearchBar::before{
-    content: "";
-    color: red;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+.SearchBar:hover{
+    background-color: rgb(224, 224, 224);
+    transform: scale(1.05);
 }
 
 .PopularTab{
+    grid-column: span 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,10 +58,41 @@ main{
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    width: 100%;
     height: 600px;
 }
 
-.PopularTab ul{
-    list-style-type: none;
+footer{
+    text-align: center;
+    grid-column: span 12;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* Pantallas grandes (desktop) */
+@media (min-width: 1200px) {
+    .body{
+        grid-template-columns: repeat(12, 1fr); /* Mantiene 12 columnas */
+    }
+}
+
+/* Laptops y tablets en horizontal */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .body{
+        grid-template-columns: repeat(6, 1fr); /* Reduce a 6 columnas */
+    }
+}
+
+/* Tablets en vertical y móviles grandes */
+@media (max-width: 767px) and (min-width: 480px) {
+    .body{
+        grid-template-columns: repeat(4, 1fr); /* Reduce a 4 columnas */
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 479px) {
+    .body{
+        grid-template-columns: repeat(2, 1fr); /* Solo 2 columnas */
+    }
 }
