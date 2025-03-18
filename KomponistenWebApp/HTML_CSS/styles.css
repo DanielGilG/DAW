@@ -1,10 +1,6 @@
 body{
     padding: 0;
     margin: 0;
-    
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
     font-family: 'Katibeh', serif;
     font-size: 22px;
@@ -14,10 +10,12 @@ body{
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 1fr 1fr 1fr;
 }
 
 header{
     grid-column: span 12;
+    grid-row: 0;
     font-size: 30px;
     color: #444444;
     text-align: center;
@@ -71,28 +69,28 @@ footer{
 
 /* Pantallas grandes (desktop) */
 @media (min-width: 1200px) {
-    .body{
+    body{
         grid-template-columns: repeat(12, 1fr); /* Mantiene 12 columnas */
     }
 }
 
 /* Laptops y tablets en horizontal */
 @media (max-width: 1199px) and (min-width: 768px) {
-    .body{
+    body{
         grid-template-columns: repeat(6, 1fr); /* Reduce a 6 columnas */
     }
 }
 
 /* Tablets en vertical y móviles grandes */
 @media (max-width: 767px) and (min-width: 480px) {
-    .body{
+    body{
         grid-template-columns: repeat(4, 1fr); /* Reduce a 4 columnas */
     }
 }
 
 /* Móviles pequeños */
 @media (max-width: 479px) {
-    .body{
+    body{
         grid-template-columns: repeat(2, 1fr); /* Solo 2 columnas */
     }
 }
