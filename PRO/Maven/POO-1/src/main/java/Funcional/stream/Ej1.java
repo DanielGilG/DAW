@@ -1,15 +1,13 @@
 package Funcional.stream;
 
-import java.util.Enumeration;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Ej1 {
     public static Integer sumaTotal (List<Integer> lista){
-        List<Integer> numberList = null;
-        Stream<Integer> numberStream = numberList.stream();
+        return lista.stream().mapToInt(Integer::intValue).sum();
     }
 }
+
 //Dada una lista de enteros, usa programación funcional para calcular la suma de todos los elementos.
 //
 //        Ejercicio 2
