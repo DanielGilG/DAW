@@ -10,7 +10,7 @@ CREATE TABLE cliente (
 START TRANSACTION;
 INSERT INTO cliente VALUES (1, 'Pepe');
 COMMIT;
-/*
+
 -- 1. ¿Qué devolverá esta consulta?
 SELECT *
 FROM cliente;
@@ -29,4 +29,4 @@ ROLLBACK;
 -- 3. ¿Qué devolverá esta consulta?
 SELECT *
 FROM cliente;
-*/
+
