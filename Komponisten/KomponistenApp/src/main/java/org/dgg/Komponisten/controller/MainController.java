@@ -1,10 +1,8 @@
 package org.dgg.Komponisten.controller;
 
-import com.sun.tools.javac.Main;
 import org.dgg.Komponisten.controller.IoC.ComposerIoC;
 import org.dgg.Komponisten.domain.entity.Composer;
 import org.dgg.Komponisten.domain.service.ComposerService;
-import org.dgg.Komponisten.domain.service.impl.ComposerServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
