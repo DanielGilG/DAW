@@ -33,14 +33,13 @@ public class ComposerDaoJdbc implements ComposerDao{
 
         try {
             statement = databaseConnection.connectionMySQL().createStatement();
-            resultSet = statement.executeQuery("select * from composers");
+            resultSet = statement.executeQuery("select * from composer;");
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String country = resultSet.getString("country");
-                Composer composer = new Composer(id, name, country);
-
+                //String country = resultSet.getString("country");
+                Composer composer = new Composer(id, name);
                 composers.add(composer);
             }
         } catch (SQLException e){
@@ -48,5 +47,4 @@ public class ComposerDaoJdbc implements ComposerDao{
         }
         return composers;
     }
-
 }

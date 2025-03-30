@@ -1,6 +1,8 @@
 drop database komponisten if exists;
 create database komponisten;
 
+use komponisten;
+
 create table composer (
 	id int not null,
 	name varchar(255),

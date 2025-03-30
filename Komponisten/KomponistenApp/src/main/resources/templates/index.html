@@ -9,10 +9,9 @@
 </head>
 
 <body>
-<div class="grid-item">1</div>
+<div class="grid-item"></div>
 <div th:each="composer : ${composers}">
-    <td th:text="$composer.name"></td>
-    <td th:text="$composer.country"></td>
+    <td th:text="${composer.name}"></td>
 </div>
 </body>
 

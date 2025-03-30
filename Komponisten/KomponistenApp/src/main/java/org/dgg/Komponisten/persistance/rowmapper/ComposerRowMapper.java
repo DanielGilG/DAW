@@ -9,8 +9,8 @@ public class ComposerRowMapper {
     public Composer mapRow(ResultSet rs) throws SQLException{
         return new Composer(
                 rs.getInt("id"),
-                rs.getString("name"),
-                rs.getString("country")
+                rs.getString("name")
+                //rs.getString("country")
         );
     }
 }
