@@ -6,3 +6,6 @@ create table composer (
 	name varchar(255),
 	primary key (id)
 );
+
+insert into composer 
+values (1, "J.S Bach");
