@@ -11,7 +11,7 @@ public class DatabaseConnection {
     protected String port = "3306";
     protected String user = "daniel";
     protected String password = "daniel123";
-    protected String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false&serverTimezone=UTC";
+    protected String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=true&serverTimezone=UTC";
 
     private static DatabaseConnection instance = null;
     public static DatabaseConnection getInstance(){

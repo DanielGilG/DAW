@@ -1,4 +1,4 @@
-drop database komponisten if exists;
+drop database if exists komponisten;
 create database komponisten;
 
 use komponisten;
