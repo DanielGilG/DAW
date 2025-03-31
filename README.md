@@ -6,6 +6,6 @@
 - HTML/CSS
 - VimRC
 
-## Projects (WIP)
+## Projects (W.I.P)
 - Komponisten 𝄞
 - *More to come...*
