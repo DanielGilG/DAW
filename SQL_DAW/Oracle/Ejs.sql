@@ -209,3 +209,5 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('nombre '||v_nombre);
     DBMS_OUTPUT.PUT_LINE('region '||v_region);
 END;
+
+-- Ejercicio 7
