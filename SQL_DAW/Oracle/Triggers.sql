@@ -1,0 +1,32 @@
+/*  ¡Boom!  */
+
+-- Ejercicio 1
+CREATE OR REPLACE TRIGGER trg_salario_minimo
+BEFORE INSERT ON HR.EMPLOYEES
+BEGIN
+	IF :NEW.salary < 1000 THEN
+		RAISE_APPLICATION_ERROR(-200001,"Rácano");
+	END IF;
+END;
+/
+
+-- Ejercicio 2
+CREATE OR REPLACE TRIGGER trg_salario_minimo
+BEFORE DELETE ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+	IF :OLD.DEPARTMENT_ID = 90 THEN
+		RAISE_APPLICATION_ERROR(-200001,"Rácano");
+	END IF;
+END;
+/
+
+-- Ejercicio 3 (con trigger de auditoría CON FECHA INCLUIDA !!)
+DROP TABLE IF EXISTS empleados_borrados;
+CREATE TABLE empleados_borrados;
+
+CREATE OR REPLACE TRIGGER trg_register_delete
+AFTER DELETE ON HR.EMPLOYEES
+FOR EACH ROW /*Puedes usar :OLD y :NEW*/
+BEGIN
+	INSERT INTO empleados_borrados
