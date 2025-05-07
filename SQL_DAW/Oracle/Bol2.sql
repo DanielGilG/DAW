@@ -1,0 +1,70 @@
+/*  ¡Boom!  */
+
+-- Ejercicio 1
+CREATE OR REPLACE TRIGGER trg_salario_minimo
+BEFORE INSERT ON HR.EMPLOYEES
+BEGIN
+	IF :NEW.salary < 1000 THEN
+		RAISE_APPLICATION_ERROR(-200001,"Rácano");
+	END IF;
+END;
+/
+
+-- Ejercicio 2
+CREATE OR REPLACE TRIGGER trg_salario_minimo
+BEFORE DELETE ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+	IF :OLD.DEPARTMENT_ID = 90 THEN
+		RAISE_APPLICATION_ERROR(-200001,"Rácano");
+	END IF;
+END;
+/
+
+-- Ejercicio 3 (con trigger de auditoría CON FECHA INCLUIDA !!)
+CREATE OR REPLACE TRIGGER trg_salario_empleado
+AFTER DELETE ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+
+    INSERT INTO empleados_borrados(employee_id, salario_anterior, salario_nuevo, SYSDATE)
+
+END;
+/
+
+-- Ejercicio 4
+CREATE OR REPLACE TRIGGER t_salario
+AFTER UPDATE OF SALARY ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+	INSERT .... :OLD.employee_id
+END;
+
+-- Ejercicio 5
+CREATE OR REPLACE TRIGGER t_cambio
+AFTER UPDATE OF SALARY ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+	UPDATE .... :OLD.salary
+END;
+
+-- Ejercicio 6
+CREATE OR REPLACE TRIGGER t_no
+BEFORE UPDATE OF MANAGER_ID ON HR.EMPLOYEES
+FOR EACH ROW
+BEGIN
+	IF :OLD.EMPLOYEE > 105
+		RAISE_APPLICATION_ERROR(-20005, "Nooooourrr");
+	END IF;
+END;
+/
+
+-- Ejercicio 7
+CREATE OR REPLACE TRIGGER t_sameName
+BEFORE INSERT
+FOR EACH ROW
+BEGIN
+
+	-- Si la cuenta del nombre es > 0 = salta
+END;
+/
