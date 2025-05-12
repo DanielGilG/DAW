@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito con cantidades y botones</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .producto {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin: 1em;
+      border-radius: 8px;
+      background: #fff;
+      width: 200px;
+    }
+
+    .producto input {
+      width: 50px;
+      margin-top: 0.5em;
+    }
+
+    .producto button {
+      margin-top: 0.5em;
+      padding: 0.4em 0.8em;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .carrito {
+      margin-top: 2em;
+      text-align: left;
+      display: inline-block;
+      background: #fff;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .carrito ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .carrito button {
+      background-color: #d9534f;
+      margin-top: 1em;
+      padding: 0.4em 0.8em;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .carrito li button {
+      margin-left: 5px;
+      background-color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tienda</h1>
+
+  <div class="producto">
+    <h3>Camisa</h3>
+    <p>20€</p>
+    <input type="number" id="cantidadCamisa" value="1" min="1">
+    <button onclick="agregarAlCarrito('Camisa', 20, 'cantidadCamisa')">Añadir</button>
+  </div>
+
+  <div class="producto">
+    <h3>Pantalón</h3>
+    <p>30€</p>
+    <input type="number" id="cantidadPantalon" value="1" min="1">
+    <button onclick="agregarAlCarrito('Pantalón', 30, 'cantidadPantalon')">Añadir</button>
+  </div>
+
+  <div class="producto">
+    <h3>Zapatillas</h3>
+    <p>50€</p>
+    <input type="number" id="cantidadZapatillas" value="1" min="1">
+    <button onclick="agregarAlCarrito('Zapatillas', 50, 'cantidadZapatillas')">Añadir</button>
+  </div>
+
+  <div class="carrito" id="carrito">
+    <h2>Carrito</h2>
+    <ul id="listaCarrito"></ul>
+    <p><strong>Total:</strong> <span id="total">0</span> €</p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+
+ 
+</body>
+</html>
+
