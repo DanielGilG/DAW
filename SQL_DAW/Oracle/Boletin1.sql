@@ -30,7 +30,7 @@ v_salario VARCHAR2;
 BEGIN
 	SELECT E.SALARY E.COMMISSION_PCT, E.JOB_ID INTO v_salario, v_com, v_salario
 	FROM HR.EMPLOYEES E
-	WHERE EM.EMPLOYEE_ID = e_id;
+	WHERE E.EMPLOYEE_ID = e_id;
 
 	IF v_com > 0 THEN
 		RETURN v_salario:=v_salario*1.10;
